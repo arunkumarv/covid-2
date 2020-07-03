@@ -121,7 +121,7 @@ var myChart = new Chart(ctx, {
         responsive: true,
         title: {
             display: true,
-            text: 'Chart.js Line Chart - Logarithmic'
+            text: 'Prediction'
         },
         scales: {
             xAxes: [{
