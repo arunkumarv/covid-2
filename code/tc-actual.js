@@ -81,7 +81,7 @@ let data = {
             }
         },
         {
-            id: 'chemeen',
+            id: 'mcq',
             meta: {
                 name: 'Name',
                 description: 'Model description here',
