@@ -164,7 +164,7 @@ var myChart = new Chart(ctx, {
             }]
         },
         tooltips: {
-            
+            mode:'index',
             intersect: false
         },
         
