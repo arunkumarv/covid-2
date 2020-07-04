@@ -6,8 +6,8 @@ body{
 }
 .top-bar{
     background-color: #fff;
-    border-bottom: 1px solid #eaeaea;
     margin-bottom: 10px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.12), inset 0 -1px 0 0 #dadce0;
 }
 
 h1.ak-title {
@@ -15,8 +15,8 @@ h1.ak-title {
     margin:0;
     text-align: center;
 }
-.h120 {
-    min-height: 120px;
+.hpanel {
+    min-height: 150px;
 }
 .panel {
     border: 1px solid #eaeaea;
