@@ -302,22 +302,22 @@ document.getElementById("myChart").onclick = function (evt) {
 var ctx1 = document.getElementById('myChart1').getContext('2d');
 
 var myChart1 = new Chart(ctx1, {
-    type: 'line',
+    type: 'LineWithLine',
     data: {
         labels: ["18/06/20", "19/06/20", "20/06/20", "21/06/20", "22/06/20", "23/06/20", "24/06/20", "25/06/20", "26/06/20", "27/06/20", "28/06/20", "29/06/20", "30/06/20", "01/07/20", "02/07/20", "03/07/20", "04/07/20", "05/07/20", "06/07/20", "07/07/20", "08/07/20", "09/07/20", "10/07/20", "11/07/20", "12/07/20", "13/07/20", "14/07/20", "15/07/20", "16/07/20", "17/07/20", "18/07/20", "19/07/20", "20/07/20", "21/07/20", "22/07/20", "23/07/20", "24/07/20", "25/07/20", "26/07/20", "27/07/20", "28/07/20", "29/07/20", "30/07/20", "31/07/20",],
         //labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: 'Actual',
-            backgroundColor: 'rgb(179, 199, 66)',
-            borderColor: 'rgb(179, 199, 66)',
+            backgroundColor: 'rgb(250, 132, 15)',
+            borderColor: 'rgb(250, 132, 15)',
             fill: false,
             borderWidth: 2,
             data: data.actual,
         },
         {
             label: 'Equal Weighted Average -Prediction',
-            backgroundColor: 'rgb(220, 122, 92)',
-            borderColor: 'rgb(220, 122, 92)',
+            backgroundColor: 'rgb(10, 242, 188)',
+            borderColor: 'rgb(10, 242, 188)',
             fill: false,
             data: [
                 null,
@@ -346,8 +346,8 @@ var myChart1 = new Chart(ctx1, {
         },
         {
             label: 'Weighted AveragePrediction -Based on AbsError',
-            backgroundColor: 'rgb(145, 216, 154)',
-            borderColor: 'rgb(145, 216, 154)',
+            backgroundColor: 'rgb(64, 163, 230)',
+            borderColor: 'rgb(64, 163, 230)',
             fill: false,
             data: [
                 null,
@@ -376,8 +376,8 @@ var myChart1 = new Chart(ctx1, {
         },
         {
             label: 'Weighted_Low_CI',
-            backgroundColor: 'rgb(228, 176, 116)',
-            borderColor: 'rgb(228, 176, 116)',
+            backgroundColor: 'rgb(124, 191, 147)',
+            borderColor: 'rgb(124, 191, 147)',
             fill: false,
             data: [
                 null,
@@ -405,8 +405,8 @@ var myChart1 = new Chart(ctx1, {
             borderWidth: 1
         }, {
             label: 'Weighted_High_CI',
-            backgroundColor: 'rgb(228, 176, 116)',
-            borderColor: 'rgb(228, 176, 116)',
+            backgroundColor: 'rgb(227, 127, 140)',
+            borderColor: 'rgb(227, 127, 140)',
             fill: false,
             data: [
                 null,
