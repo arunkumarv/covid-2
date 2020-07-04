@@ -3,16 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/flexboxgrid.min.css">
+    <link rel="stylesheet" href="static/style.css">
     <title>ChartJS</title>
 </head>
 <body>
+    <div class="top-bar">
+        <h1 class="ak-title">Covid - Ensemble Forcast</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel h120">
+                    <h3 class="panel-title">Objective</h3>
+                    <div class="panel-body">
+                        One-stop to discover different India covid-19 forecast. To bring the power of convergence of multiple prediction models using weighted average to derive a forecast with greater accuracy.
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel h120">
+                    <h3 class="panel-title">Inference</h3>
+                    <div class="panel-body">
+                        Mathematical modeling helps policy makers respond to the COVID-19 pandemic by informing decisions about pandemic planning, resource allocation, and implementation of social distancing measures and other interventions.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel h120">
+                    <h3 class="panel-title">Objective</h3>
+                    <div class="panel-body">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel h120">
+                    <h3 class="panel-title">Inference</h3>
+                    <div class="panel-body">
+                        <canvas id="myChart1"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
     <a href="d3f-index.html">D3 forcast</a>
     <div style="width:100%;">
-        <canvas id="myChart"></canvas>
+        
     </div>
 
     <div style="width:100%;">
-        <canvas id="myChart1"></canvas>
+        
     </div>
 
     <!-- Chart.js v2.9.3 -->

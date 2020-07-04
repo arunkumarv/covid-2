@@ -1,0 +1,36 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: #f4f4f4;
+
+}
+.top-bar{
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+
+h1.ak-title {
+    padding: 15px;
+    margin:0;
+    text-align: center;
+}
+.h120 {
+    min-height: 120px;
+}
+.panel {
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.panel-title {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px;
+    margin:0;
+}
+
+.panel-body {
+    padding: 10px;
+
+}

@@ -345,7 +345,7 @@ var myChart1 = new Chart(ctx1, {
             borderWidth: 1
         },
         {
-            label: 'Weighted AveragePrediction -Based on AbsError=Avg(0.05*M1+0.05*M2+0.04*M3+0.03*M4+0.03*M5+0.8*M6)',
+            label: 'Weighted AveragePrediction -Based on AbsError',
             backgroundColor: 'rgb(145, 216, 154)',
             borderColor: 'rgb(145, 216, 154)',
             fill: false,
