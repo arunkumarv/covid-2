@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
     <title>ChartJS</title>
 </head>
+
 <body>
     <div class="top-bar">
         <h2 class="ak-title">Covid - Ensemble Forcast</h2>
@@ -18,7 +20,8 @@
                 <div class="panel hpanel">
                     <h3 class="panel-title">Objective</h3>
                     <div class="panel-body">
-                        One-stop to discover different India covid-19 forecast. To bring the power of convergence of multiple prediction models using weighted average to derive a forecast with greater accuracy.
+                        One-stop to discover different India covid-19 forecast. To bring the power of convergence of
+                        multiple prediction models using weighted average to derive a forecast with greater accuracy.
                     </div>
                 </div>
             </div>
@@ -26,7 +29,9 @@
                 <div class="panel hpanel">
                     <h3 class="panel-title">Inference</h3>
                     <div class="panel-body">
-                        Mathematical modeling helps policy makers respond to the COVID-19 pandemic by informing decisions about pandemic planning, resource allocation, and implementation of social distancing measures and other interventions.
+                        Mathematical modeling helps policy makers respond to the COVID-19 pandemic by informing
+                        decisions about pandemic planning, resource allocation, and implementation of social distancing
+                        measures and other interventions.
                     </div>
                 </div>
             </div>
@@ -34,12 +39,25 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="panel hpanel">
+                <div class="panel hpanel"id="theDiv">
                     <h3 class="panel-title">Predictions from Top Models</h3>
+                    <!-- <button></button> -->
                     <div class="panel-body">
                         <canvas id="myChart"></canvas>
                     </div>
                 </div>
+                <script>
+                    $('#theButton').click(function () {
+                        $('#theDiv').css({
+                            position: 'fixed',
+                            top: 0,
+                            right: 0,
+                            bottom: 0,
+                            left: 0,
+                            zIndex: 999
+                        });
+                    });
+                </script>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="panel hpanel">
@@ -53,41 +71,97 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="panel hpanel">
+                <div class="panel hpanel1">
                     <h3 class="panel-title">Model Selection Criteria</h3>
                     <div class="panel-body">
                         <ul>
-                            <li>Considering  models currently deployed on the Web</li>
+                            <li>Considering models currently deployed on the Web</li>
                             <li>Models should forecast India covid-19 total count</li>
                             <li>Forecast data be updated daily/weekly basis</li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="panel hpanel">
+                <div class="panel hpanel1">
                     <h3 class="panel-title">Forecast Methodology</h3>
                     <div class="panel-body">
-                        The ensemble model encompasses models with forecasts varying from  691944  by July 8th in the most optimistic model to 770718  in the most pessimistic model. After calculating the accuracy of the various models and assigning weights to the predictions based on their accuracy we make our projection in Fig 2. A table depicting the various parameters used for rating the acccuracy of the models is also given below .
+                        The ensemble model encompasses models with forecasts varying from 691944 by July 8th in the most
+                        optimistic model to 770718 in the most pessimistic model. After calculating the accuracy of the
+                        various models and assigning weights to the predictions based on their accuracy we make our
+                        projection in Fig 2. A table depicting the various parameters used for rating the acccuracy of
+                        the models is also given below .
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                <div class="panel hpanel">
+                    <h3 class="panel-title">Model Error/Accuracy Matrix</h3>
+                    <div class="panel-body">
+                        <table>
+                            <tr>
+                                </td>Model</td>
+                                <td> Accuracy</td>
+                                <td> MAE </td>
+                                <td>RMSE </td>
+                            </tr>
+                            <tr>
+                                <td>M1- MIT</td>
+                                <td> 96.63</td>
+                                <td> 15775</td>
+                                <td> 18613 </td>
+                            </tr>
+                            <tr>
+                                <td>M2- University of Michigan</td>
+                                <td> 98.01 </td>
+                                <td>8351 </td>
+                                <td>10510.00 </td>
+                            </tr>
+                            <tr>
+                                <td>M3-ISpirt Model </td>
+                                <td> 96.49 </td>
+                                <td>14020 </td>
+                                <td>19303.00 </td>
+                            </tr>
+                            <tr>
+                                <td>M4-Fraser Group - Oxford Univesity</td>
+                                <td> 96.45</td>
+                                <td> 15898 </td>
+                                <td>19573.00</td>
+                            </tr>
+                            <tr>
+                                <td> M5-Swiss Epidemic Prediction Data </td>
+                                <td>96.13</td>
+                                <td> 18315 </td>
+                                <td>19736 </td>
+                            </tr>
+                            <tr>
+                                <td> M6-Oliver Wyman</td>
+                                <td> 98.66</td>
+                                <td> 7244</td>
+                                <td> 7628</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
- 
-    <a href="d3f-index.html">D3 forcast</a>
-    <div style="width:100%;">
-        
-    </div>
 
-    <div style="width:100%;">
-        
-    </div>
+
+
+    <!--     <a href="d3f-index.html">D3 forcast</a> -->
+
 
     <!-- Chart.js v2.9.3 -->
     <script src="static/Chart.min.js"></script>
     <script src="code/chart.js"></script>
-        
+
 </body>
+
 </html>
