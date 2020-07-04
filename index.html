@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/flexboxgrid.min.css">
     <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
     <title>ChartJS</title>
 </head>
 <body>
     <div class="top-bar">
         <h1 class="ak-title">Covid - Ensemble Forcast</h1>
     </div>
-    <div class="container">
+    <div class="pad">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="panel h120">
@@ -34,7 +35,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="panel h120">
-                    <h3 class="panel-title">Objective</h3>
+                    <h3 class="panel-title">Predictions from Top Models</h3>
                     <div class="panel-body">
                         <canvas id="myChart"></canvas>
                     </div>
@@ -42,9 +43,31 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="panel h120">
-                    <h3 class="panel-title">Inference</h3>
+                    <h3 class="panel-title">Weighted Average forecast</h3>
                     <div class="panel-body">
                         <canvas id="myChart1"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel h120">
+                    <h3 class="panel-title">Model Selection Criteria</h3>
+                    <div class="panel-body">
+                        "1. Considering  models currently deployed on the Web
+2. Models should forecast India covid-19 total count          
+3. Forecast data be updated daily/weekly basis
+"
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel h120">
+                    <h3 class="panel-title">Forecast Methodology</h3>
+                    <div class="panel-body">
+                        The ensemble model encompasses models with forecasts varying from  691944  by July 8th in the most optimistic model to 770718  in the most pessimistic model. After calculating the accuracy of the various models and assigning weights to the predictions based on their accuracy we make our projection in Fig 2. A table depicting the various parameters used for rating the acccuracy of the models is also given below .
                     </div>
                 </div>
             </div>

@@ -2,12 +2,12 @@ body{
     margin:0;
     padding:0;
     background-color: #f4f4f4;
-
+    font-family: 'Baskervville', serif;
 }
 .top-bar{
     background-color: #fff;
     border-bottom: 1px solid #eaeaea;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 h1.ak-title {
@@ -33,4 +33,7 @@ h1.ak-title {
 .panel-body {
     padding: 10px;
 
+}
+.pad {
+    padding: 10px;
 }
