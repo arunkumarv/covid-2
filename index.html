@@ -18,7 +18,9 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="panel hpanel">
-                    <h3 class="panel-title">Objective</h3>
+                    <div class="panel-title">
+                        <h3>Objective</h3>
+                    </div>
                     <div class="panel-body">
                         One-stop to discover different India covid-19 forecast. To bring the power of convergence of
                         multiple prediction models using weighted average to derive a forecast with greater accuracy.
@@ -27,7 +29,9 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="panel hpanel">
-                    <h3 class="panel-title">Inference</h3>
+                    <div class="panel-title">
+                        <h3>Inference</h3>
+                    </div>
                     <div class="panel-body">
                         Mathematical modeling helps policy makers respond to the COVID-19 pandemic by informing
                         decisions about pandemic planning, resource allocation, and implementation of social distancing
@@ -39,29 +43,30 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="panel hpanel"id="theDiv">
-                    <h3 class="panel-title">Predictions from Top Models</h3>
-                    <!-- <button></button> -->
+                <div class="panel hpanel" id="graph1">
+                    <div class="panel-title">
+                        <div class="row between-xs" style="padding-left: 10px;padding-right: 10px;">
+                            <div class="col"><h3>Predictions from Top Models</h3></div>
+                            <div class="col"><button id="g1-btn" class="btn">Toggle Full Screen</button></div>
+                        </div>
+                    </div>
+                    
                     <div class="panel-body">
                         <canvas id="myChart"></canvas>
                     </div>
                 </div>
-                <script>
-                    $('#theButton').click(function () {
-                        $('#theDiv').css({
-                            position: 'fixed',
-                            top: 0,
-                            right: 0,
-                            bottom: 0,
-                            left: 0,
-                            zIndex: 999
-                        });
-                    });
-                </script>
+
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="panel hpanel">
-                    <h3 class="panel-title">Weighted Average forecast</h3>
+                <div class="panel hpanel" id="graph2">
+                    <div class="panel-title">
+                        <div class="row between-xs" style="padding-left: 10px;padding-right: 10px;">
+                            <div class="col"><h3>Weighted Average forecast</h3></div>
+                            <div class="col" style="text-align: right;"><button id="g2-btn" class="btn">Toggle Full Screen</button></div>
+                        </div>
+                                            
+                        
+                    </div>
                     <div class="panel-body">
                         <canvas id="myChart1"></canvas>
                     </div>
@@ -72,7 +77,9 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="panel hpanel1">
-                    <h3 class="panel-title">Model Selection Criteria</h3>
+                    <div class="panel-title">
+                        <h3>Model Selection Criteria</h3>
+                    </div>
                     <div class="panel-body">
                         <ul>
                             <li>Considering models currently deployed on the Web</li>
@@ -85,7 +92,9 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="panel hpanel1">
-                    <h3 class="panel-title">Forecast Methodology</h3>
+                    <div class="panel-title">
+                        <h3>Forecast Methodology</h3>
+                    </div>
                     <div class="panel-body">
                         The ensemble model encompasses models with forecasts varying from 691944 by July 8th in the most
                         optimistic model to 770718 in the most pessimistic model. After calculating the accuracy of the
@@ -101,7 +110,9 @@
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
                 <div class="panel hpanel">
-                    <h3 class="panel-title">Model Error/Accuracy Matrix</h3>
+                    <div class="panel-title">
+                        <h3>Model Error/Accuracy Matrix</h3>
+                    </div>
                     <div class="panel-body">
                         <table>
                             <tr>
@@ -159,8 +170,66 @@
 
 
     <!-- Chart.js v2.9.3 -->
+    <script src="static/jquery-3.5.1.min.js"></script>
     <script src="static/Chart.min.js"></script>
     <script src="code/chart.js"></script>
+
+    <script>
+        let isG1Fullscreen = false;
+        let isG2Fullscreen = false;
+
+        $('#g1-btn').click(function () {
+
+            if (isG1Fullscreen) {
+                $('#graph1').css({
+                    position: 'relative',
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    zIndex: 0
+                });
+                isG1Fullscreen = false;
+            } else {
+                $('#graph1').css({
+                    position: 'fixed',
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    zIndex: 999
+                });
+                isG1Fullscreen = true;
+            }
+
+        });
+
+        $('#g2-btn').click(function () {
+
+if (isG2Fullscreen) {
+    $('#graph2').css({
+        position: 'relative',
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        zIndex: 0
+    });
+    isG2Fullscreen = false;
+} else {
+    $('#graph2').css({
+        position: 'fixed',
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        zIndex: 999
+    });
+    isG2Fullscreen = true;
+}
+
+});
+    </script>
 
 </body>
 

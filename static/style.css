@@ -35,6 +35,8 @@ h2.ak-title {
     margin:0;
 }
 
+.panel-title h3 { margin:0; padding: 0;}
+
 .panel-body {
     padding: 10px;
 
@@ -42,3 +44,24 @@ h2.ak-title {
 .pad {
     padding: 10px;
 }
+
+.full-screen {
+    position: 'fixed';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.btn {
+    border-radius: 0%;
+    padding: 3px 10px;
+    color: #666;
+    font-size: 12px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button.btn:focus { outline: none;}
