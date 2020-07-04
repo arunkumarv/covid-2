@@ -46,8 +46,11 @@
                 <div class="panel hpanel" id="graph1">
                     <div class="panel-title">
                         <div class="row between-xs" style="padding-left: 10px;padding-right: 10px;">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><h3>Predictions from Top Models</h3></div>
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;"><button id="g1-btn" class="btn">Toggle Full Screen</button></div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <h3>Predictions from Top Models</h3>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;"><button
+                                    id="g1-btn" class="btn">Toggle Full Screen</button></div>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -60,8 +63,11 @@
                 <div class="panel hpanel" id="graph2">
                     <div class="panel-title">
                         <div class="row between-xs" style="padding-left: 10px;padding-right: 10px;">
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><h3>Weighted Average forecast</h3></div>
-                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;"><button id="g2-btn" class="btn">Toggle Full Screen</button></div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <h3>Weighted Average forecast</h3>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;"><button
+                                    id="g2-btn" class="btn">Toggle Full Screen</button></div>
                         </div>
                     </div>
                     <div class="panel-body">
@@ -71,49 +77,18 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="panel hpanel1">
-                    <div class="panel-title">
-                        <h3>Model Selection Criteria</h3>
-                    </div>
-                    <div class="panel-body">
-                        <ul>
-                            <li>Considering models currently deployed on the Web</li>
-                            <li>Models should forecast India covid-19 total count</li>
-                            <li>Forecast data be updated daily/weekly basis</li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="panel hpanel1">
-                    <div class="panel-title">
-                        <h3>Forecast Methodology</h3>
-                    </div>
-                    <div class="panel-body">
-                        The ensemble model encompasses models with forecasts varying from 691944 by July 8th in the most
-                        optimistic model to 770718 in the most pessimistic model. After calculating the accuracy of the
-                        various models and assigning weights to the predictions based on their accuracy we make our
-                        projection in Fig 2. A table depicting the various parameters used for rating the acccuracy of
-                        the models is also given below .
-                    </div>
-                </div>
-            </div>
-        </div>
+        
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-
-                <div class="panel hpanel">
+                <div class="panel hpanel" style="min-height: 330px;">
                     <div class="panel-title">
                         <h3>Model Error/Accuracy Matrix</h3>
                     </div>
                     <div class="panel-body">
                         <table>
                             <tr>
-                                </td>Model</td>
+                                <td>Model</td>
                                 <td> Accuracy</td>
                                 <td> MAE </td>
                                 <td>RMSE </td>
@@ -158,7 +133,106 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel" style="min-height: 330px;">
+                    <div class="panel-title">
+                        <h3>Teams & Model</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table>
+
+                            <tr>
+                                <td>Model</td>
+                                <td> Team</td>
+                                <td> link</td>
+                            </tr>
+                            <tr>
+                                <td>M1</td>
+                                <td> MIT </td>
+                                <td><a href="https://www.covidanalytics.io/projections">https://www.covidanalytics.io/projections</a> </td>
+                            </tr>
+                            <tr>
+                                <td> M2</td>
+                                <td> University of Michigan</td>
+                                <td> <a href="https://umich-biostatistics.shinyapps.io/covid19/">https://umich-biostatistics.shinyapps.io/covid19/</a></td>
+                            </tr>
+                            <tr>
+                                <td> M3</td>
+                                <td> ISpirt Model </td>
+                                <td> <a href="https://indiadistrictmodel.indiacovidmodel.in/">https://indiadistrictmodel.indiacovidmodel.in/</a></td>
+                            </tr>
+                            <tr>
+                                <td> M4</td>
+                                <td> Fraser Group - Oxford Univesity</td>
+                                <td> <a href="https://dmca.shinyapps.io/covidcurves/">https://dmca.shinyapps.io/covidcurves/</a></td>
+                            </tr>
+                            <tr>
+                                <td> M5</td>
+                                <td> Swiss Epidemic Prediction Data</td>
+                                <td> <a href="https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/">https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/</a></td>
+                            </tr>
+                            <tr>
+                                <td> M6</td>
+                                <td> Oliver Wyman</td>
+                                <td><a href="https://pandemicnavigator.oliverwyman.com/forecast?mode=country&region=India&panel=baseline">https://pandemicnavigator.oliverwyman.com/forecast?mode=country&region=India&panel=baseline</a> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel">
+                    <div class="panel-title">
+                        <h3>Forecast Methodology</h3>
+                    </div>
+                    <div class="panel-body">
+                        The ensemble model encompasses models with forecasts varying from 691944 by July 8th in the most
+                        optimistic model to 770718 in the most pessimistic model. After calculating the accuracy of the
+                        various models and assigning weights to the predictions based on their accuracy we make our
+                        projection in Fig 2. A table depicting the various parameters used for rating the acccuracy of
+                        the models is also given below .
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel1">
+                    <div class="panel-title">
+                        <h3>Model Selection Criteria</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li>Considering models currently deployed on the Web</li>
+                            <li>Models should forecast India covid-19 total count</li>
+                            <li>Forecast data be updated daily/weekly basis</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel" style="text-align: left;">
+                    <div class="panel-title">
+                        <h3>Reference</h3>
+                    </div>
+                    <div class="panel-body">	
+                        <a href="https://www.covidanalytics.io/projections">https://www.covidanalytics.io/projections</a>
+                        <a href="https://umich-biostatistics.shinyapps.io/covid19/">https://umich-biostatistics.shinyapps.io/covid19/</a>
+                        <a href="https://indiadistrictmodel.indiacovidmodel.in/">https://indiadistrictmodel.indiacovidmodel.in/</a>
+                        <a href="https://dmca.shinyapps.io/covidcurves/">https://dmca.shinyapps.io/covidcurves/</a>
+                        <a href="https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/">https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/</a>
+                        <a href="https://pandemicnavigator.oliverwyman.com/forecast?mode=country&region=India&panel=baseline">https://pandemicnavigator.oliverwyman.com/forecast?mode=country&region=India&panel=baseline</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
     </div>
 
 
@@ -203,29 +277,29 @@
 
         $('#g2-btn').click(function () {
 
-if (isG2Fullscreen) {
-    $('#graph2').css({
-        position: 'relative',
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
-        zIndex: 0
-    });
-    isG2Fullscreen = false;
-} else {
-    $('#graph2').css({
-        position: 'fixed',
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
-        zIndex: 999
-    });
-    isG2Fullscreen = true;
-}
+            if (isG2Fullscreen) {
+                $('#graph2').css({
+                    position: 'relative',
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    zIndex: 0
+                });
+                isG2Fullscreen = false;
+            } else {
+                $('#graph2').css({
+                    position: 'fixed',
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    zIndex: 999
+                });
+                isG2Fullscreen = true;
+            }
 
-});
+        });
     </script>
 
 </body>

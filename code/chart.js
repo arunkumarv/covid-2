@@ -144,8 +144,8 @@ var myChart = new Chart(ctx, {
         events: ['click'],
         responsive: true,
         title: {
-            display: true,
-            text: 'Prediction'
+            display: false,
+            text: ''
         },
         scales: {
             xAxes: [{
@@ -438,8 +438,8 @@ var myChart1 = new Chart(ctx1, {
         events: ['click'],
         responsive: true,
         title: {
-            display: true,
-            text: 'Prediction'
+            display: false,
+            text: ''
         },
         scales: {
             xAxes: [{
