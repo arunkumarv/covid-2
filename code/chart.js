@@ -66,6 +66,9 @@ var myChart = new Chart(ctx, {
             fill: false,
             borderWidth: 2,
             data: data.actual,
+            
+            
+
         },
         {
             label: 'M1',
@@ -73,7 +76,8 @@ var myChart = new Chart(ctx, {
             borderColor: 'rgb(220, 122, 92)',
             fill: false,
             data: [],
-            borderWidth: 1
+            borderWidth: 1,
+            
         },
         {
             label: 'M2',
@@ -81,7 +85,7 @@ var myChart = new Chart(ctx, {
             borderColor: 'rgb(145, 216, 154)',
             fill: false,
             data: [],
-            borderWidth: 1
+            borderWidth: 1,
         },
         {
             label: 'M3',
@@ -89,7 +93,7 @@ var myChart = new Chart(ctx, {
             borderColor: 'rgb(228, 176, 116)',
             fill: false,
             data: [],
-            borderWidth: 1
+            borderWidth: 1,
         },
         {
             label: 'M4',
@@ -97,7 +101,7 @@ var myChart = new Chart(ctx, {
             borderColor: 'rgb(188, 209, 194)',
             fill: false,
             data: [],
-            borderWidth: 1
+            borderWidth: 1,
         },
         {
             label: 'M5',
@@ -105,7 +109,7 @@ var myChart = new Chart(ctx, {
             borderColor: 'rgb(208, 165, 214)',
             fill: false,
             data: [],
-            borderWidth: 1
+            borderWidth: 1,
         },
         {
             label: 'M6',
@@ -113,7 +117,7 @@ var myChart = new Chart(ctx, {
             borderColor: 'rgb(214, 213, 156)',
             fill: false,
             data: [],
-            borderWidth: 1
+            borderWidth: 1,
         },/*
         {
             label: 'Equal Weighted Average -Prediction',
@@ -319,6 +323,8 @@ var myChart1 = new Chart(ctx1, {
             backgroundColor: 'rgb(10, 242, 188)',
             borderColor: 'rgb(10, 242, 188)',
             fill: false,
+            pointRadius: 1,
+pointHoverRadius: 1,
             data: [
                 null,
                 null,
@@ -349,6 +355,8 @@ var myChart1 = new Chart(ctx1, {
             backgroundColor: 'rgb(64, 163, 230)',
             borderColor: 'rgb(64, 163, 230)',
             fill: false,
+            pointRadius: 1,
+pointHoverRadius: 1,
             data: [
                 null,
                 null,
@@ -379,6 +387,8 @@ var myChart1 = new Chart(ctx1, {
             backgroundColor: 'rgb(124, 191, 147)',
             borderColor: 'rgb(124, 191, 147)',
             fill: false,
+            pointRadius: 1,
+pointHoverRadius: 1,
             data: [
                 null,
                 null,
@@ -408,6 +418,8 @@ var myChart1 = new Chart(ctx1, {
             backgroundColor: 'rgb(227, 127, 140)',
             borderColor: 'rgb(227, 127, 140)',
             fill: false,
+            pointRadius: 1,
+pointHoverRadius: 1,
             data: [
                 null,
                 null,
