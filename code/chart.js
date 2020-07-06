@@ -28,27 +28,27 @@ function copy(o) {
 
 Chart.defaults.LineWithLine = Chart.defaults.line;
 Chart.controllers.LineWithLine = Chart.controllers.line.extend({
-   draw: function(ease) {
-      Chart.controllers.line.prototype.draw.call(this, ease);
+    draw: function (ease) {
+        Chart.controllers.line.prototype.draw.call(this, ease);
 
-      if (this.chart.tooltip._active && this.chart.tooltip._active.length) {
-         var activePoint = this.chart.tooltip._active[0],
-             ctx = this.chart.ctx,
-             x = activePoint.tooltipPosition().x,
-             topY = this.chart.scales['y-axis-0'].top,
-             bottomY = this.chart.scales['y-axis-0'].bottom;
+        if (this.chart.tooltip._active && this.chart.tooltip._active.length) {
+            var activePoint = this.chart.tooltip._active[0],
+                ctx = this.chart.ctx,
+                x = activePoint.tooltipPosition().x,
+                topY = this.chart.scales['y-axis-0'].top,
+                bottomY = this.chart.scales['y-axis-0'].bottom;
 
-         // draw line
-         ctx.save();
-         ctx.beginPath();
-         ctx.moveTo(x, topY);
-         ctx.lineTo(x, bottomY);
-         ctx.lineWidth = 1;
-         ctx.strokeStyle = '#aaa';
-         ctx.stroke();
-         ctx.restore();
-      }
-   }
+            // draw line
+            ctx.save();
+            ctx.beginPath();
+            ctx.moveTo(x, topY);
+            ctx.lineTo(x, bottomY);
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = '#aaa';
+            ctx.stroke();
+            ctx.restore();
+        }
+    }
 });
 
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -66,9 +66,6 @@ var myChart = new Chart(ctx, {
             fill: false,
             borderWidth: 2,
             data: data.actual,
-            
-            
-
         },
         {
             label: 'M1',
@@ -77,7 +74,7 @@ var myChart = new Chart(ctx, {
             fill: false,
             data: [],
             borderWidth: 1,
-            
+
         },
         {
             label: 'M2',
@@ -157,23 +154,136 @@ var myChart = new Chart(ctx, {
             }],
             yAxes: [{
                 display: true,
-               /*  gridLines: {
-                    color: "rgba(0, 0, 0, 0)",
-                }, */
+                /*  gridLines: {
+                     color: "rgba(0, 0, 0, 0)",
+                 }, */
                 ticks: {
-                    callback: function(label, index, labels) {
-                        return label/1000+'k';
+                    callback: function (label, index, labels) {
+                        return label / 1000 + 'k';
                     }
                 }
             }]
         },
         tooltips: {
-            mode:'index',
+            mode: 'index',
             intersect: false
         },
-        
+
     }
 });
+
+setTimeout(function(){
+
+    let pos = 12;
+
+    let newData = copy(data);
+
+            let c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0;
+
+            newData.m1.forEach(function (item, index) {
+
+                if (index == pos + 1) {
+
+                    c1 = 4;
+                }
+                if (c1 != 0) {
+
+                    c1--;
+                } else {
+                    newData.m1[index] = null;
+                }
+            });
+
+            newData.m2.forEach(function (item, index) {
+                if (index == pos + 1) {
+                    c2 = 4;
+                }
+                if (c2 != 0) {
+                    c2--;
+                } else {
+                    newData.m2[index] = null;
+                }
+            });
+
+            newData.m3.forEach(function (item, index) {
+                if (index == pos + 1) {
+                    c3 = 4;
+                }
+                if (c3 != 0) {
+
+                    c3--;
+                } else {
+                    newData.m3[index] = null;
+                }
+            });
+
+            newData.m4.forEach(function (item, index) {
+                if (index == pos + 1) {
+                    c4 = 4;
+                }
+                if (c4 != 0) {
+
+                    c4--;
+                } else {
+                    newData.m4[index] = null;
+                }
+            });
+
+            newData.m5.forEach(function (item, index) {
+                if (index == pos + 1) {
+                    c5 = 4;
+                }
+                if (c5 != 0) {
+
+                    c5--;
+                } else {
+                    newData.m5[index] = null;
+                }
+            });
+
+            newData.m6.forEach(function (item, index) {
+                if (index == pos + 1) {
+                    c6 = 4;
+                }
+                if (c6 != 0) {
+
+                    c6--;
+                } else {
+                    newData.m6[index] = null;
+                }
+            });
+
+            myChart.data.datasets.forEach((dataset) => {
+
+                if (dataset.label == 'M1') {
+
+                    dataset.data = newData.m1;
+
+                } else if (dataset.label == 'M2') {
+
+                    dataset.data = newData.m2;
+
+                } else if (dataset.label == 'M3') {
+
+                    dataset.data = newData.m3;
+
+                } else if (dataset.label == 'M4') {
+
+                    dataset.data = newData.m4;
+
+                } else if (dataset.label == 'M5') {
+
+                    dataset.data = newData.m5;
+
+                } else if (dataset.label == 'M6') {
+
+                    dataset.data = newData.m6;
+                }
+
+            });
+
+            myChart.update();
+}, 500);
 
 
 
@@ -189,7 +299,7 @@ document.getElementById("myChart").onclick = function (evt) {
 
             let pos = nArray[0]._index;
 
-            // console.log(pos);
+            console.log(pos);
 
             let newData = copy(data);
 
@@ -319,134 +429,59 @@ var myChart1 = new Chart(ctx1, {
             data: data.actual,
         },
         {
-            label: 'Equal Weighted Average -Prediction',
-            backgroundColor: 'rgb(10, 242, 188)',
-            borderColor: 'rgb(10, 242, 188)',
-            fill: false,
-            pointRadius: 1,
-pointHoverRadius: 1,
-            data: [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                496194,
-                511373,
-                526869,
-                544504,
-                566078,
-                581123,
-                612741,
-                631667,
-                650998,
-                670741,
-                690867,
-                710072,
-                730016,
-            ],
-            borderWidth: 1
-        },
-        {
-            label: 'Weighted AveragePrediction -Based on AbsError',
-            backgroundColor: 'rgb(64, 163, 230)',
-            borderColor: 'rgb(64, 163, 230)',
-            fill: false,
-            pointRadius: 1,
-pointHoverRadius: 1,
-            data: [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                503357,
-                520081,
-                537197,
-                555304,
-                575026,
-                593236,
-                624530,
-                645854,
-                667749,
-                690196,
-                713262,
-                736752,
-                760944,
-            ],
-            borderWidth: 1
-        },
-        {
             label: 'Weighted_Low_CI',
             backgroundColor: 'rgb(124, 191, 147)',
             borderColor: 'rgb(124, 191, 147)',
             fill: false,
             pointRadius: 1,
-pointHoverRadius: 1,
-            data: [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                472205,
-                488929,
-                506045,
-                524152,
-                543874,
-                562084,
-                593378,
-                614702,
-                636597,
-                659044,
-                682110,
-                705600,
-                729792,
-            ],
+            pointHoverRadius: 1,
+            data: [null,null,null,null,null,null,null,null,472205,488929,506045,524152,543874,562084,593378,614702,636597,659044,682110,705600,729792,],
+            borderWidth: 1
+        },
+        {
+            label: 'Equal Weighted Average -Prediction',
+            backgroundColor: 'rgb(10, 242, 188)',
+            borderColor: 'rgb(10, 242, 188)',
+            fill: false,
+            pointRadius: 1,
+            pointHoverRadius: 1,
+            data: [ null,null,null,null,null,null,null,null,496194,511373,526869,544504,566078,581123,612741,631667,650998,670741,690867,710072,730016,],
+            borderWidth: 1
+        },
+        {
+            label: 'Weighted AveragePrediction -Based on AbsError',
+            backgroundColor: 'rgb(64, 163, 230, 0.3)',
+            borderColor: 'rgb(64, 163, 230)',
+            fill: '-1',
+            pointRadius: 1,
+            pointHoverRadius: 1,
+            data: [null,null,null,null,null,null,null,null,503357,520081,537197,555304,575026,593236,624530,645854,667749,690196,713262,736752,760944,],
             borderWidth: 1
         }, {
             label: 'Weighted_High_CI',
-            backgroundColor: 'rgb(227, 127, 140)',
+            backgroundColor: 'rgb(227, 127, 140, 0.3)',
             borderColor: 'rgb(227, 127, 140)',
-            fill: false,
+            fill: '-1',
             pointRadius: 1,
-pointHoverRadius: 1,
-            data: [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                534509,
-                551233,
-                568349,
-                586456,
-                606178,
-                624388,
-                655683,
-                677006,
-                698901,
-                721348,
-                744414,
-                767904,
-                792096,
-            ],
+            pointHoverRadius: 1,
+            data: [null,null,null,null,null,null,null,null,534509,551233,568349,586456,606178,624388,655683,677006,698901,721348,744414,767904,792096,],
             borderWidth: 1
         }]
     },
     options: {
+        maintainAspectRatio: true,
+        spanGaps: false,
+        elements: {
+            line: {
+                tension: 0.000001
+            }
+        },
+        plugins: {
+            filler: {
+                propagate: false
+            }
+        },
+
         events: ['click'],
         responsive: true,
         title: {
@@ -456,9 +491,17 @@ pointHoverRadius: 1,
         scales: {
             xAxes: [{
                 display: true,
+                ticks: {
+                    autoSkip: false
+                }
             }],
             yAxes: [{
                 display: true,
+                ticks: {
+                    callback: function (label, index, labels) {
+                        return label / 1000 + 'k';
+                    }
+                }
             }]
         },
         tooltips: {
