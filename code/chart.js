@@ -283,7 +283,7 @@ setTimeout(function(){
             });
 
             myChart.update();
-}, 500);
+}, 200);
 
 
 
@@ -415,6 +415,16 @@ document.getElementById("myChart").onclick = function (evt) {
 
 var ctx1 = document.getElementById('myChart1').getContext('2d');
 
+/*  */
+
+let wl_ci = [null,null,null,null,null,null,null,null,472205,488929,506045,524152,543874,562084,593378,614702,636597,659044,682110,705600,729792,];
+
+let ew_ap = [null,null,null,null,null,null,null,null,496194,511373,526869,544504,566078,581123,612741,631667,650998,670741,690867,710072,730016,];
+
+let wab_ba = [null,null,null,null,null,null,null,null,503357,520081,537197,555304,575026,593236,624530,645854,667749,690196,713262,736752,760944,];
+
+let wh_ci = [null,null,null,null,null,null,null,null,534509,551233,568349,586456,606178,624388,655683,677006,698901,721348,744414,767904,792096,];
+
 var myChart1 = new Chart(ctx1, {
     type: 'LineWithLine',
     data: {
@@ -430,22 +440,21 @@ var myChart1 = new Chart(ctx1, {
         },
         {
             label: 'Weighted_Low_CI',
-            backgroundColor: 'rgb(124, 191, 147)',
             borderColor: 'rgb(124, 191, 147)',
             fill: false,
             pointRadius: 1,
             pointHoverRadius: 1,
-            data: [null,null,null,null,null,null,null,null,472205,488929,506045,524152,543874,562084,593378,614702,636597,659044,682110,705600,729792,],
+            data: wl_ci,
             borderWidth: 1
         },
         {
             label: 'Equal Weighted Average -Prediction',
-            backgroundColor: 'rgb(10, 242, 188)',
-            borderColor: 'rgb(10, 242, 188)',
-            fill: false,
+            backgroundColor: 'rgb(124, 191, 147, 0.3)',
+            borderColor: 'rgb(168, 52, 235)',
+            fill: '-1',
             pointRadius: 1,
             pointHoverRadius: 1,
-            data: [ null,null,null,null,null,null,null,null,496194,511373,526869,544504,566078,581123,612741,631667,650998,670741,690867,710072,730016,],
+            data: ew_ap,
             borderWidth: 1
         },
         {
@@ -455,7 +464,7 @@ var myChart1 = new Chart(ctx1, {
             fill: '-1',
             pointRadius: 1,
             pointHoverRadius: 1,
-            data: [null,null,null,null,null,null,null,null,503357,520081,537197,555304,575026,593236,624530,645854,667749,690196,713262,736752,760944,],
+            data: wab_ba,
             borderWidth: 1
         }, {
             label: 'Weighted_High_CI',
@@ -464,7 +473,7 @@ var myChart1 = new Chart(ctx1, {
             fill: '-1',
             pointRadius: 1,
             pointHoverRadius: 1,
-            data: [null,null,null,null,null,null,null,null,534509,551233,568349,586456,606178,624388,655683,677006,698901,721348,744414,767904,792096,],
+            data: wh_ci,
             borderWidth: 1
         }]
     },
