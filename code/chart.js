@@ -1,14 +1,14 @@
 let data = {
-    actual: [380532, 395048, 410451, 425282, 440215, 456183, 472985, 491170, 509445, 529587, 549197, 567536, 585792],
-    m1: [null, null, null, null, 437044, 451281, 465759, 480474, 495421, 510595, 525990, 541602, 557424, 573449, 589673, 606087, 622686, 639461, 656406, 673513, 690773, 708181, 725726, 743401, 761197, 779106, 797119, 815227, 833422, 851694, 870034, 888433, 906882, 925372, 943894, 962439, 980996, 999558, 1018115, 1036659,],
-    m2: [null, null, null, 433208, 448394, 460230, 475070, 488383, 501449, 514351, 527709, 552394, 599098, 604989, 620178, 635299, 650490, 665799, 680913, 695857, 710668, 725426, 740194],
-    m3: [387177, 400237, 413377, 426608, 439935, 453362, 466891, 480522, 494257, 508096, 522040, 536089, 550242, 564500, 578863, 593331, 607905, 622584, 637367, 652257, 667251, 682349, 697553, 712862, 728275, 743793, 759415, 775142, 790972, 806906, 822944, 839085, 855328, 871676, 888125, 904676, 922131,],
+    actual: [380532, 395048, 410451, 425282, 440215, 456183, 472985, 491170, 509445, 529587, 549197, 567536, 585792, 605221, 627168, 649886, 673904, 697836],
+    m1: [null, null, null, null, 437044, 451281, 465759, 480474, 495421, 510595, 525990, 541602, 557424, 573449, 613162, 631965, 651092, 670540, 690307, 710386, 730775, 751467, 772458, 793743, 815316, 837170, 859299, 881697, 904357, 927271, 950432, 973832, 997464, 1021318, 1045387,],
+    m2: [null, null, null, 433208, 448394, 460230, 475070, 488383, 501449, 514351, 527709, 552394, 599098, 604989, 620178, 635299, 650490, 665799, 680913, 695857, 710668, 725426, 740194,],
+    m3: [387177, 400237, 413377, 426608, 439935, 453362, 466891, 480522, 494257, 508096, 522040, 536089, 550242, 564500, 615578, 633367, 651401, 669675, 688192, 706953, 725961, 745218, 764213, 712862, 784481, 804492, 824758, 845282, 866062, 887105, 908408, 929976, 951806, 973904, 996270, 1018903, 1041807, 1064982, 1088430,],
     m4: [380000, 393120, 406509, 420167, 434092, 448283, 462739, 477459, 492442, 507685, 523188, 538947, 554961, 571228, 587744, 604509, 621518, 638769, 656259, 673985, 691944, 710132, 728545, 747181, 766035, 785103, 804383, 823869, 843557, 863444, 883525, 903795, 924250, 944887, 965699, 986683, 1007833, 1029146, 1050616, 1072238,],
-    m5: [370312, 383828, 397416, 412201, 426875, 441954, 457920, 471973, 488191, 504845, 521939, 539481, 557474, 575924, 611975, 634894, 658728, 683510, 709272,],
-    m6: [null, null, null, null, null, null, null, 488563, 505405, 522668, 540346, 558510, 577271, 596650, 616532, 636897, 657703, 678908, 700593, 722787, 745442, 768594, 792244, 816395, 841050, 866213,],
-    ewap: [null, null, null, null, null, null, null, null, 496194, 511373, 526869, 544504, 566078, 581123, 600828, 618503, 636505, 654839, 673468,],
-    wabom: [null, null, null, null, null, null, null, null, 498028, 513499, 529299, 547080, 568477, 584072, 603231, 621160, 639412, 657983, 676851,],
-    waboa: [null, null, null, null, null, null, null, null, 503357, 520081, 537197, 555304, 575026, 593236, 612864, 632502, 652545, 672961, 693801,]
+    m5: [370312, 383828, 397416, 412201, 426875, 441954, 457920, 471973, 488191, 504845, 521939, 539481, 557474, 575924, 611975, 634894, 658728, 683510, 709272, 728128, 750032],
+    m6: [null, null, null, null, null, null, null, 488563, 505405, 522668, 540346, 558510, 577271, 596650, 627811, 649968, 672758, 696155, 720259, 745123, 770718, 797020, 824056, 851777, 880119, 909174, 939083, 969904, 1001524, 1033949, 1067188, 1101253, 1136158],
+    //   ewap: [null, null, null, null, null, null, null, null, 496194, 511373, 526869, 544504, 566078, 581123, 600828, 618503, 636505, 654839, 673468,],
+    //   wabom: [null, null, null, null, null, null, null, null, 498028, 513499, 529299, 547080, 568477, 584072, 603231, 621160, 639412, 657983, 676851,],
+    //   waboa: [null, null, null, null, null, null, null, null, 503357, 520081, 537197, 555304, 575026, 593236, 612864, 632502, 652545, 672961, 693801,]
 };
 
 function copy(o) {
@@ -172,117 +172,117 @@ var myChart = new Chart(ctx, {
     }
 });
 
-setTimeout(function(){
+setTimeout(function () {
 
-    let pos = 12;
+    let pos = 17;
 
     let newData = copy(data);
 
-            let c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0;
+    let c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0;
 
-            newData.m1.forEach(function (item, index) {
+    newData.m1.forEach(function (item, index) {
 
-                if (index == pos + 1) {
+        if (index == pos + 1) {
 
-                    c1 = 4;
-                }
-                if (c1 != 0) {
+            c1 = 4;
+        }
+        if (c1 != 0) {
 
-                    c1--;
-                } else {
-                    newData.m1[index] = null;
-                }
-            });
+            c1--;
+        } else {
+            newData.m1[index] = null;
+        }
+    });
 
-            newData.m2.forEach(function (item, index) {
-                if (index == pos + 1) {
-                    c2 = 4;
-                }
-                if (c2 != 0) {
-                    c2--;
-                } else {
-                    newData.m2[index] = null;
-                }
-            });
+    newData.m2.forEach(function (item, index) {
+        if (index == pos + 1) {
+            c2 = 4;
+        }
+        if (c2 != 0) {
+            c2--;
+        } else {
+            newData.m2[index] = null;
+        }
+    });
 
-            newData.m3.forEach(function (item, index) {
-                if (index == pos + 1) {
-                    c3 = 4;
-                }
-                if (c3 != 0) {
+    newData.m3.forEach(function (item, index) {
+        if (index == pos + 1) {
+            c3 = 4;
+        }
+        if (c3 != 0) {
 
-                    c3--;
-                } else {
-                    newData.m3[index] = null;
-                }
-            });
+            c3--;
+        } else {
+            newData.m3[index] = null;
+        }
+    });
 
-            newData.m4.forEach(function (item, index) {
-                if (index == pos + 1) {
-                    c4 = 4;
-                }
-                if (c4 != 0) {
+    newData.m4.forEach(function (item, index) {
+        if (index == pos + 1) {
+            c4 = 4;
+        }
+        if (c4 != 0) {
 
-                    c4--;
-                } else {
-                    newData.m4[index] = null;
-                }
-            });
+            c4--;
+        } else {
+            newData.m4[index] = null;
+        }
+    });
 
-            newData.m5.forEach(function (item, index) {
-                if (index == pos + 1) {
-                    c5 = 4;
-                }
-                if (c5 != 0) {
+    newData.m5.forEach(function (item, index) {
+        if (index == pos + 1) {
+            c5 = 4;
+        }
+        if (c5 != 0) {
 
-                    c5--;
-                } else {
-                    newData.m5[index] = null;
-                }
-            });
+            c5--;
+        } else {
+            newData.m5[index] = null;
+        }
+    });
 
-            newData.m6.forEach(function (item, index) {
-                if (index == pos + 1) {
-                    c6 = 4;
-                }
-                if (c6 != 0) {
+    newData.m6.forEach(function (item, index) {
+        if (index == pos + 1) {
+            c6 = 4;
+        }
+        if (c6 != 0) {
 
-                    c6--;
-                } else {
-                    newData.m6[index] = null;
-                }
-            });
+            c6--;
+        } else {
+            newData.m6[index] = null;
+        }
+    });
 
-            myChart.data.datasets.forEach((dataset) => {
+    myChart.data.datasets.forEach((dataset) => {
 
-                if (dataset.label == 'M1') {
+        if (dataset.label == 'M1') {
 
-                    dataset.data = newData.m1;
+            dataset.data = newData.m1;
 
-                } else if (dataset.label == 'M2') {
+        } else if (dataset.label == 'M2') {
 
-                    dataset.data = newData.m2;
+            dataset.data = newData.m2;
 
-                } else if (dataset.label == 'M3') {
+        } else if (dataset.label == 'M3') {
 
-                    dataset.data = newData.m3;
+            dataset.data = newData.m3;
 
-                } else if (dataset.label == 'M4') {
+        } else if (dataset.label == 'M4') {
 
-                    dataset.data = newData.m4;
+            dataset.data = newData.m4;
 
-                } else if (dataset.label == 'M5') {
+        } else if (dataset.label == 'M5') {
 
-                    dataset.data = newData.m5;
+            dataset.data = newData.m5;
 
-                } else if (dataset.label == 'M6') {
+        } else if (dataset.label == 'M6') {
 
-                    dataset.data = newData.m6;
-                }
+            dataset.data = newData.m6;
+        }
 
-            });
+    });
 
-            myChart.update();
+    myChart.update();
 }, 200);
 
 
@@ -417,13 +417,64 @@ var ctx1 = document.getElementById('myChart1').getContext('2d');
 
 /*  */
 
-let wl_ci = [null,null,null,null,null,null,null,null,472205,488929,506045,524152,543874,562084,593378,614702,636597,659044,682110,705600,729792,];
+let wl_ci = [null, null, null, null, null, null, null, null,
+    467987,
+    484711,
+    501827,
+    519934,
+    539656,
+    557867,
+    589161,
+    610484,
+    632379,
+    654826,
+    677892,
+    701382,
+    725574,
+];
 
-let ew_ap = [null,null,null,null,null,null,null,null,496194,511373,526869,544504,566078,581123,612741,631667,650998,670741,690867,710072,730016,];
+let ew_ap = [null, null, null, null, null, null, null, null, 496194,
+    511373,
+    526869,
+    544504,
+    566078,
+    581123,
+    612741,
+    631667,
+    650998,
+    670741,
+    690867,
+    710072,
+    730016];
 
-let wab_ba = [null,null,null,null,null,null,null,null,503357,520081,537197,555304,575026,593236,624530,645854,667749,690196,713262,736752,760944,];
+let wab_ba = [null, null, null, null, null, null, null, null, 503357,
+    520081,
+    537197,
+    555304,
+    575026,
+    593236,
+    624530,
+    645854,
+    667749,
+    690196,
+    713262,
+    736752,
+    760944];
 
-let wh_ci = [null,null,null,null,null,null,null,null,534509,551233,568349,586456,606178,624388,655683,677006,698901,721348,744414,767904,792096,];
+let wh_ci = [null, null, null, null, null, null, null, null,
+    538727,
+    555451,
+    572567,
+    590674,
+    610396,
+    628606,
+    659900,
+    681224,
+    703119,
+    725566,
+    748632,
+    772122,
+    796314];
 
 var myChart1 = new Chart(ctx1, {
     type: 'LineWithLine',
