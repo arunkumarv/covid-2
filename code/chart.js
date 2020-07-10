@@ -1,16 +1,39 @@
 let data = {
-    actual: [380532, 395048, 410451, 425282, 440215, 456183, 472985, 491170, 509445, 529587, 549197, 567536, 585792, 605221, 627168, 649886, 673904, 697836],
-    m1: [null, null, null, null, 437044, 451281, 465759, 480474, 495421, 510595, 525990, 541602, 557424, 573449, 613162, 631965, 651092, 670540, 690307, 710386, 730775, 751467, 772458, 793743, 815316, 837170, 859299, 881697, 904357, 927271, 950432, 973832, 997464, 1021318, 1045387,],
-    m2: [null, null, null, 433208, 448394, 460230, 475070, 488383, 501449, 514351, 527709, 552394, 599098, 604989, 620178, 635299, 650490, 665799, 680913, 695857, 710668, 725426, 740194,],
-    m3: [387177, 400237, 413377, 426608, 439935, 453362, 466891, 480522, 494257, 508096, 522040, 536089, 550242, 564500, 615578, 633367, 651401, 669675, 688192, 706953, 725961, 745218, 764213, 712862, 784481, 804492, 824758, 845282, 866062, 887105, 908408, 929976, 951806, 973904, 996270, 1018903, 1041807, 1064982, 1088430,],
-    m4: [380000, 393120, 406509, 420167, 434092, 448283, 462739, 477459, 492442, 507685, 523188, 538947, 554961, 571228, 587744, 604509, 621518, 638769, 656259, 673985, 691944, 710132, 728545, 747181, 766035, 785103, 804383, 823869, 843557, 863444, 883525, 903795, 924250, 944887, 965699, 986683, 1007833, 1029146, 1050616, 1072238,],
-    m5: [370312, 383828, 397416, 412201, 426875, 441954, 457920, 471973, 488191, 504845, 521939, 539481, 557474, 575924, 611975, 634894, 658728, 683510, 709272, 728128, 750032],
-    m6: [null, null, null, null, null, null, null, 488563, 505405, 522668, 540346, 558510, 577271, 596650, 627811, 649968, 672758, 696155, 720259, 745123, 770718, 797020, 824056, 851777, 880119, 909174, 939083, 969904, 1001524, 1033949, 1067188, 1101253, 1136158],
+    dates:['18/06/20', '19/06/20', '20/06/20', '21/06/20', '22/06/20', '23/06/20', '24/06/20', '25/06/20', '26/06/20', '27/06/20', '28/06/20', '29/06/20', '30/06/20', '01/07/20', '02/07/20', '03/07/20', '04/07/20', '05/07/20', '06/07/20', '07/07/20', '08/07/20', '09/07/20', '10/07/20', '11/07/20', '12/07/20', '13/07/20', '14/07/20', '15/07/20', '16/07/20', '17/07/20', '18/07/20', '19/07/20', '20/07/20', '21/07/20', '22/07/20', '23/07/20', '24/07/20', '25/07/20', '26/07/20', '27/07/20', '28/07/20', '29/07/20', '30/07/20', '31/07/20'],
+    actual: ['380532', '395048', '410451', '425282', '440215', '456183', '472985', '491170', '509445', '529587', '549197', '567536', '585792', '605221', '627168', '649886', '673904', '697846', '720346', '743491', '769052', '794842', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    m1: [null, null, null, null, '437044', '451281', '465759', '480474', '495421', '510595', '525990', '541602', '557424', '573449', '613162', '631965', '651092', '670540', '690307', '710386', '730775', '773359', '796172', '819326', '842815', '866636', '890780', '915243', '940017', '965096', '990472', '1016138', null, null, null, null, null, null, null, null, null, null, null, null],
+    m2: [null, null, null, '433208', '448394', '460230', '475070', '488383', '501449', '514351', '527709', '552394', '599098', '604989', '620178', '635299', '650490', '665799', '680913', '695857', '710668', '805647', '826852', '848064', '869161', '889452', '909841', '930328', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    m3: ['387177', '400237', '413377', '426608', '439935', '453362', '466891', '480522', '494257', '508096', '522040', '536089', '550242', '564500', '615578', '633367', '651401', '669675', '688192', '706953', '725961', '796433', '823913', '852242', '881444', '911540', '942556', '974513', '1007436', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    m4: ['380000', '393120', '406509', '420167', '434092', '448283', '462739', '477459', '492442', '507685', '523188', '538947', '554961', '571228', '587744', '604509', '621518', '638769', '656259', '673985', '691944', '710132', '807687', '834226', '859545', '885386', '911751', '938644', '966069', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    m5: ['370312', '383828', '397416', '412201', '426875', '441954', '457920', '471973', '488191', '504845', '521939', '539481', '557474', '575924', '611975', '634894', '658728', '683510', '709272', '728128', '750032', '771373', '792715', '817474', '842693', '868381', '894545', '921068', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    m6: [null, null, null, null, null, null, null, '488563', '505405', '522668', '540346', '558510', '577271', '596650', '627811', '649968', '672758', '696155', '720259', '745123', '770718', '797020', '820175', '847670', '875790', '904629', '934329', '964954', '996535', '1029001', null, null, null, null, null, null, null, null, null, null, null, null, null, null],
     //   ewap: [null, null, null, null, null, null, null, null, 496194, 511373, 526869, 544504, 566078, 581123, 600828, 618503, 636505, 654839, 673468,],
     //   wabom: [null, null, null, null, null, null, null, null, 498028, 513499, 529299, 547080, 568477, 584072, 603231, 621160, 639412, 657983, 676851,],
     //   waboa: [null, null, null, null, null, null, null, null, 503357, 520081, 537197, 555304, 575026, 593236, 612864, 632502, 652545, 672961, 693801,]
 };
 
+let wl_ci = [null, null, null, null, null, null, null, null, '459246', '475971', '493087', '511194', '530915', '549126', '580420', '601744', '623639', '646086', '669152', '692642', '716834', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+let ew_ap = [null, null, null, null, null, null, null, null, '496194', '511373', '526869', '544504', '566078', '581123', '612741', '631667', '650998', '670741', '690867', '710072', '730016', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]; 
+let wab_ba = [null, null, null, null, null, null, null, null, '503357', '520081', '537197', '555304', '575026', '593236', '624530', '645854', '667749', '690196', '713262', '736752', '760944', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]; 
+let wh_ci = [null, null, null, null, null, null, null, null, '547467', '564192', '581307', '599414', '619136', '637347', '668641', '689965', '711859', '734307', '757372', '780862', '805055', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+
+
+let colors = {
+    actual: 'rgb(179, 199, 66)',
+    m1: 'rgb(220, 122, 92)',
+    m2: 'rgb(145, 216, 154)',
+    m3: 'rgb(228, 176, 116)',
+    m4: 'rgb(188, 209, 194)',
+    m5: 'rgb(208, 165, 214)',
+    m6: 'rgb(214, 213, 156)',
+    wl_ci: 'rgb(173, 160, 158)',
+    ew_ap: 'rgb(160, 173, 161)',
+    wab_ba: 'rgb(168, 170, 179)',
+    wh_ci: 'rgb(173, 166, 172)',
+    ew_ap_bk: 'rgb(160, 173, 161, 0.3)',
+    wab_ba_bk: 'rgb(168, 170, 179, 0.3)',
+    wh_ci_bk: 'rgb(173, 166, 172, 0.3)'
+}
 function copy(o) {
 
     var output, v, key;
@@ -57,64 +80,77 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'LineWithLine',
     data: {
-        labels: ["18/06/20", "19/06/20", "20/06/20", "21/06/20", "22/06/20", "23/06/20", "24/06/20", "25/06/20", "26/06/20", "27/06/20", "28/06/20", "29/06/20", "30/06/20", "01/07/20", "02/07/20", "03/07/20", "04/07/20", "05/07/20", "06/07/20", "07/07/20", "08/07/20", "09/07/20", "10/07/20", "11/07/20", "12/07/20", "13/07/20", "14/07/20", "15/07/20", "16/07/20", "17/07/20", "18/07/20", "19/07/20", "20/07/20", "21/07/20", "22/07/20", "23/07/20", "24/07/20", "25/07/20", "26/07/20", "27/07/20", "28/07/20", "29/07/20", "30/07/20", "31/07/20",],
+        labels: data.dates,
         //labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: 'Actual',
             backgroundColor: 'rgb(179, 199, 66)',
-            borderColor: 'rgb(179, 199, 66)',
+            borderColor: colors.actual,
             fill: false,
-            borderWidth: 2,
+            borderWidth: 3,
+            pointRadius: 1,
+            pointHoverRadius: 1,
             data: data.actual,
         },
         {
             label: 'M1',
             backgroundColor: 'rgb(220, 122, 92)',
-            borderColor: 'rgb(220, 122, 92)',
+            borderColor: colors.m1,
             fill: false,
             data: [],
             borderWidth: 1,
-
+            pointRadius: 1,
+            pointHoverRadius: 1,
         },
         {
             label: 'M2',
             backgroundColor: 'rgb(145, 216, 154)',
-            borderColor: 'rgb(145, 216, 154)',
+            borderColor: colors.m2,
             fill: false,
             data: [],
             borderWidth: 1,
+            pointRadius: 1,
+            pointHoverRadius: 1,
         },
         {
             label: 'M3',
             backgroundColor: 'rgb(228, 176, 116)',
-            borderColor: 'rgb(228, 176, 116)',
+            borderColor: colors.m3,
             fill: false,
             data: [],
             borderWidth: 1,
+            pointRadius: 1,
+            pointHoverRadius: 1,
         },
         {
             label: 'M4',
             backgroundColor: 'rgb(188, 209, 194)',
-            borderColor: 'rgb(188, 209, 194)',
+            borderColor: colors.m4,
             fill: false,
             data: [],
             borderWidth: 1,
+            pointRadius: 1,
+            pointHoverRadius: 1,
         },
         {
             label: 'M5',
             backgroundColor: 'rgb(208, 165, 214)',
-            borderColor: 'rgb(208, 165, 214)',
+            borderColor: colors.m5,
             fill: false,
             data: [],
             borderWidth: 1,
+            pointRadius: 1,
+            pointHoverRadius: 1,
         },
         {
             label: 'M6',
             backgroundColor: 'rgb(214, 213, 156)',
-            borderColor: 'rgb(214, 213, 156)',
+            borderColor: colors.m6,
             fill: false,
             data: [],
             borderWidth: 1,
+            pointRadius: 1,
+            pointHoverRadius: 1,
         },/*
         {
             label: 'Equal Weighted Average -Prediction',
@@ -174,7 +210,7 @@ var myChart = new Chart(ctx, {
 
 setTimeout(function () {
 
-    let pos = 17;
+    let pos = 21;
 
     let newData = copy(data);
 
@@ -414,84 +450,24 @@ document.getElementById("myChart").onclick = function (evt) {
 
 
 var ctx1 = document.getElementById('myChart1').getContext('2d');
-
-/*  */
-
-let wl_ci = [null, null, null, null, null, null, null, null,
-    467987,
-    484711,
-    501827,
-    519934,
-    539656,
-    557867,
-    589161,
-    610484,
-    632379,
-    654826,
-    677892,
-    701382,
-    725574,
-];
-
-let ew_ap = [null, null, null, null, null, null, null, null, 496194,
-    511373,
-    526869,
-    544504,
-    566078,
-    581123,
-    612741,
-    631667,
-    650998,
-    670741,
-    690867,
-    710072,
-    730016];
-
-let wab_ba = [null, null, null, null, null, null, null, null, 503357,
-    520081,
-    537197,
-    555304,
-    575026,
-    593236,
-    624530,
-    645854,
-    667749,
-    690196,
-    713262,
-    736752,
-    760944];
-
-let wh_ci = [null, null, null, null, null, null, null, null,
-    538727,
-    555451,
-    572567,
-    590674,
-    610396,
-    628606,
-    659900,
-    681224,
-    703119,
-    725566,
-    748632,
-    772122,
-    796314];
-
 var myChart1 = new Chart(ctx1, {
     type: 'LineWithLine',
     data: {
-        labels: ["18/06/20", "19/06/20", "20/06/20", "21/06/20", "22/06/20", "23/06/20", "24/06/20", "25/06/20", "26/06/20", "27/06/20", "28/06/20", "29/06/20", "30/06/20", "01/07/20", "02/07/20", "03/07/20", "04/07/20", "05/07/20", "06/07/20", "07/07/20", "08/07/20", "09/07/20", "10/07/20", "11/07/20", "12/07/20", "13/07/20", "14/07/20", "15/07/20", "16/07/20", "17/07/20", "18/07/20", "19/07/20", "20/07/20", "21/07/20", "22/07/20", "23/07/20", "24/07/20", "25/07/20", "26/07/20", "27/07/20", "28/07/20", "29/07/20", "30/07/20", "31/07/20",],
+        labels: data.dates,
         //labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: 'Actual',
             backgroundColor: 'rgb(250, 132, 15)',
-            borderColor: 'rgb(250, 132, 15)',
+            borderColor: colors.actual,
             fill: false,
             borderWidth: 2,
+            pointRadius: 1,
+            pointHoverRadius: 1,
             data: data.actual,
         },
         {
             label: 'Weighted_Low_CI',
-            borderColor: 'rgb(124, 191, 147)',
+            borderColor: colors.wl_ci,
             fill: false,
             pointRadius: 1,
             pointHoverRadius: 1,
@@ -500,8 +476,8 @@ var myChart1 = new Chart(ctx1, {
         },
         {
             label: 'Equal Weighted Average -Prediction',
-            backgroundColor: 'rgb(124, 191, 147, 0.3)',
-            borderColor: 'rgb(168, 52, 235)',
+            backgroundColor: colors.ew_ap_bk,
+            borderColor: colors.ew_ap,
             fill: '-1',
             pointRadius: 1,
             pointHoverRadius: 1,
@@ -510,8 +486,8 @@ var myChart1 = new Chart(ctx1, {
         },
         {
             label: 'Weighted AveragePrediction -Based on AbsError',
-            backgroundColor: 'rgb(64, 163, 230, 0.3)',
-            borderColor: 'rgb(64, 163, 230)',
+            backgroundColor: colors.wab_ba_bk,
+            borderColor: colors.wab_ba,
             fill: '-1',
             pointRadius: 1,
             pointHoverRadius: 1,
@@ -519,8 +495,8 @@ var myChart1 = new Chart(ctx1, {
             borderWidth: 1
         }, {
             label: 'Weighted_High_CI',
-            backgroundColor: 'rgb(227, 127, 140, 0.3)',
-            borderColor: 'rgb(227, 127, 140)',
+            backgroundColor: colors.wh_ci_bk,
+            borderColor: colors.wh_ci,
             fill: '-1',
             pointRadius: 1,
             pointHoverRadius: 1,
