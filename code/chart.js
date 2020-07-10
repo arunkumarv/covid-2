@@ -34,7 +34,7 @@ let colors = {
     wh_ci_bk: 'rgb(157, 176, 207, 0.6)', 
 
     wab_ba: 'rgb(110, 67, 83)',
-    wab_ba_bk: 'rgb(202, 227, 215, 0.3)',
+    wab_ba_bk: 'rgb(237, 202, 221, 0.3)',
 
     wl_ci: 'rgb(6, 194, 27)',
 
