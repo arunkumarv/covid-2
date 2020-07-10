@@ -21,21 +21,25 @@ let wl_ci = [null, null, null, null, null, null, null, null, '459163', '475889',
 //let ew_ap = [null, null, null, null, null, null, null, null, '496194', '511373', '526869', '544504', '566078', '581123', '612741', '631667', '650998', '670741', '690867', '710072', '730016', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]; 
 
 let colors = {
-    actual: 'rgb(0, 184, 18)',
-    actual_bk: 'rgb(0, 184, 18,0.3)',
+    actual: 'rgb(240, 128, 0)',
+    actual_bk: 'rgb(240, 128, 0,0.3)',
     m1: 'rgb(220, 122, 92)',
     m2: 'rgb(145, 216, 154)',
     m3: 'rgb(228, 176, 116)',
     m4: 'rgb(188, 209, 194)',
     m5: 'rgb(208, 165, 214)',
     m6: 'rgb(214, 213, 156)',
-    wl_ci: 'rgb(173, 160, 158)',
-    ew_ap: 'rgb(160, 173, 161)',
-    wab_ba: 'rgb(168, 170, 179)',
-    wh_ci: 'rgb(173, 166, 172)',
-    ew_ap_bk: 'rgb(160, 173, 161, 0.3)',
-    wab_ba_bk: 'rgb(168, 170, 179, 0.3)',
-    wh_ci_bk: 'rgb(173, 166, 172, 0.6)'
+
+    wh_ci: 'rgb(0, 83, 227)',
+    wh_ci_bk: 'rgb(145, 160, 196, 0.6)', 
+
+    wab_ba: 'rgb(222, 182, 2)',
+    wab_ba_bk: 'rgb(141, 194, 147, 0.3)',
+
+    wl_ci: 'rgb(6, 194, 27)',
+
+    //ew_ap: 'rgb(160, 173, 161)',
+    //ew_ap_bk: 'rgb(160, 173, 161, 0.3)',
 }
 function copy(o) {
 
@@ -90,7 +94,7 @@ var myChart = new Chart(ctx, {
             backgroundColor: colors.actual_bk,
             borderColor: colors.actual,
             fill: false,
-            borderWidth: 3,
+            borderWidth: 2,
             pointRadius: 1,
             pointHoverRadius: 1,
             data: data.actual,
