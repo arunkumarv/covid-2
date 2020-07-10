@@ -12,14 +12,17 @@ let data = {
     //   waboa: [null, null, null, null, null, null, null, null, 503357, 520081, 537197, 555304, 575026, 593236, 612864, 632502, 652545, 672961, 693801,]
 };
 
-let wl_ci = [null, null, null, null, null, null, null, null, '459246', '475971', '493087', '511194', '530915', '549126', '580420', '601744', '623639', '646086', '669152', '692642', '716834', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
-let ew_ap = [null, null, null, null, null, null, null, null, '496194', '511373', '526869', '544504', '566078', '581123', '612741', '631667', '650998', '670741', '690867', '710072', '730016', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]; 
-let wab_ba = [null, null, null, null, null, null, null, null, '503357', '520081', '537197', '555304', '575026', '593236', '624530', '645854', '667749', '690196', '713262', '736752', '760944', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]; 
-let wh_ci = [null, null, null, null, null, null, null, null, '547467', '564192', '581307', '599414', '619136', '637347', '668641', '689965', '711859', '734307', '757372', '780862', '805055', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
 
+ 
+let wh_ci = [null, null, null, null, null, null, null, null, '547383', '564109', '581227', '599338', '619065', '637282', '668653', '690008', '711939', '734428', '757541', '781005', '805199', '837190', '862613', '889567', '917051', '945159', '974051', '1003775', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+let wab_ba = [null, null, null, null, null, null, null, null, '503273', '519999', '537117', '555228', '574954', '593172', '624543', '645898', '667828', '690317', '713430', '736895', '761089', '793080', '818503', '845457', '872941', '901049', '929941', '959665', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+let wl_ci = [null, null, null, null, null, null, null, null, '459163', '475889', '493007', '511118', '530844', '549061', '580433', '601787', '623718', '646207', '669320', '692785', '716978', '748969', '774392', '801347', '828830', '856938', '885831', '915554', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+
+//let ew_ap = [null, null, null, null, null, null, null, null, '496194', '511373', '526869', '544504', '566078', '581123', '612741', '631667', '650998', '670741', '690867', '710072', '730016', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]; 
 
 let colors = {
-    actual: 'rgb(179, 199, 66)',
+    actual: 'rgb(0, 184, 18)',
+    actual_bk: 'rgb(0, 184, 18,0.3)',
     m1: 'rgb(220, 122, 92)',
     m2: 'rgb(145, 216, 154)',
     m3: 'rgb(228, 176, 116)',
@@ -32,7 +35,7 @@ let colors = {
     wh_ci: 'rgb(173, 166, 172)',
     ew_ap_bk: 'rgb(160, 173, 161, 0.3)',
     wab_ba_bk: 'rgb(168, 170, 179, 0.3)',
-    wh_ci_bk: 'rgb(173, 166, 172, 0.3)'
+    wh_ci_bk: 'rgb(173, 166, 172, 0.6)'
 }
 function copy(o) {
 
@@ -84,7 +87,7 @@ var myChart = new Chart(ctx, {
         //labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: 'Actual',
-            backgroundColor: 'rgb(179, 199, 66)',
+            backgroundColor: colors.actual_bk,
             borderColor: colors.actual,
             fill: false,
             borderWidth: 3,
@@ -220,7 +223,7 @@ setTimeout(function () {
 
         if (index == pos + 1) {
 
-            c1 = 4;
+            c1 = 6;
         }
         if (c1 != 0) {
 
@@ -232,7 +235,7 @@ setTimeout(function () {
 
     newData.m2.forEach(function (item, index) {
         if (index == pos + 1) {
-            c2 = 4;
+            c2 = 5;
         }
         if (c2 != 0) {
             c2--;
@@ -243,7 +246,7 @@ setTimeout(function () {
 
     newData.m3.forEach(function (item, index) {
         if (index == pos + 1) {
-            c3 = 4;
+            c3 = 6;
         }
         if (c3 != 0) {
 
@@ -255,7 +258,7 @@ setTimeout(function () {
 
     newData.m4.forEach(function (item, index) {
         if (index == pos + 1) {
-            c4 = 4;
+            c4 = 6;
         }
         if (c4 != 0) {
 
@@ -267,7 +270,7 @@ setTimeout(function () {
 
     newData.m5.forEach(function (item, index) {
         if (index == pos + 1) {
-            c5 = 4;
+            c5 = 6;
         }
         if (c5 != 0) {
 
@@ -279,7 +282,7 @@ setTimeout(function () {
 
     newData.m6.forEach(function (item, index) {
         if (index == pos + 1) {
-            c6 = 4;
+            c6 = 6;
         }
         if (c6 != 0) {
 
@@ -457,7 +460,7 @@ var myChart1 = new Chart(ctx1, {
         //labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
             label: 'Actual',
-            backgroundColor: 'rgb(250, 132, 15)',
+            backgroundColor: colors.actual_bk,
             borderColor: colors.actual,
             fill: false,
             borderWidth: 2,
@@ -473,7 +476,7 @@ var myChart1 = new Chart(ctx1, {
             pointHoverRadius: 1,
             data: wl_ci,
             borderWidth: 1
-        },
+        },/*
         {
             label: 'Equal Weighted Average -Prediction',
             backgroundColor: colors.ew_ap_bk,
@@ -483,7 +486,7 @@ var myChart1 = new Chart(ctx1, {
             pointHoverRadius: 1,
             data: ew_ap,
             borderWidth: 1
-        },
+        }, */
         {
             label: 'Weighted AveragePrediction -Based on AbsError',
             backgroundColor: colors.wab_ba_bk,
