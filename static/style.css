@@ -89,6 +89,7 @@ a.developer {
     border: 1px solid #eaeaea;
     background-color: #fff;
     border-radius: 5px;
+    display: inline-block;
 }
 
 a.developer:hover {
