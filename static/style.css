@@ -90,3 +90,7 @@ a.developer {
     background-color: #fff;
     border-radius: 5px;
 }
+
+a.developer:hover {
+    background-color: azure;
+}
