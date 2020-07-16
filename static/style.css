@@ -81,3 +81,10 @@ table {
 }
 
 td { word-wrap: break-word; border: 1px solid #eaeaea; padding: 2px 5px;}
+
+a.developer {
+    padding: 5px 15px;
+    margin: 5px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+}
