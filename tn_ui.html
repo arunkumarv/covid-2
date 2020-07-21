@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/flexboxgrid.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
+    <title>Ensemble Forecast</title>
+</head>
+
+<body>
+    <div class="top-bar">
+        <h2 class="ak-title">TN_UI</h2>
+        <div class="team">
+            <a href="https://www.linkedin.com/in/solaimuruganv/">Solaimurugan V</a> |
+            <a href="https://www.linkedin.com/in/rathivakkayil/">Rathi Vakkayil</a> | 
+            <a href="https://www.linkedin.com/in/arunkumarv31/">Arunkumar V</a>
+        </div>
+    </div>
+    <div class="pad">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel">
+                    <div class="panel-title">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="panel-body">
+                        One-stop to discover different India covid-19 forecast. To bring the power of convergence of
+                        multiple prediction models using weighted average to derive a forecast with greater accuracy.
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel">
+                    <div class="panel-title">
+                        <h3>Inference</h3>
+                    </div>
+                    <div class="panel-body">
+                        Mathematical modeling helps policy makers respond to the COVID-19 pandemic by informing
+                        decisions about pandemic planning, resource allocation, and implementation of social distancing
+                        measures and other interventions.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel">
+                    <div class="panel-title">
+                        <h3>Forecast Methodology</h3>
+                    </div>
+                    <div class="panel-body">
+                        The ensemble model encompasses models with forecasts varying from 691944 by July 8th in the most
+                        optimistic model to 770718 in the most pessimistic model. After calculating the accuracy of the
+                        various models and assigning weights to the predictions based on their accuracy we make our
+                        projection in Fig 2. A table depicting the various parameters used for rating the acccuracy of
+                        the models is also given below .
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel" id="graph1">
+                    <div class="panel-title">
+                        <div class="row between-xs" style="padding-left: 10px;padding-right: 10px;">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <h3>Predictions from Top Models</h3>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;"><button
+                                    id="g1-btn" class="btn">Toggle Full Screen</button></div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel" id="graph2">
+                    <div class="panel-title">
+                        <div class="row between-xs" style="padding-left: 10px;padding-right: 10px;">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                <h3>Weighted Average forecast</h3>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;"><button
+                                    id="g2-btn" class="btn">Toggle Full Screen</button></div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="myChart1"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel" style="min-height: 330px;">
+                    <div class="panel-title">
+                        <h3>Model Error/Accuracy Matrix</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table>
+                            <tr>
+                                <td>Model</td>
+                                <td> Accuracy</td>
+                                <td> MAE </td>
+                                <td>RMSE </td>
+                            </tr>
+                            <tr>
+                                <td>M1- MIT</td>
+                                <td> 96.63</td>
+                                <td> 15775</td>
+                                <td> 18613 </td>
+                            </tr>
+                            <tr>
+                                <td>M2- University of Michigan</td>
+                                <td> 98.01 </td>
+                                <td>8351 </td>
+                                <td>10510.00 </td>
+                            </tr>
+                            <tr>
+                                <td>M3-ISpirt Model </td>
+                                <td> 96.49 </td>
+                                <td>14020 </td>
+                                <td>19303.00 </td>
+                            </tr>
+                            <tr>
+                                <td>M4-Fraser Group - Oxford Univesity</td>
+                                <td> 96.45</td>
+                                <td> 15898 </td>
+                                <td>19573.00</td>
+                            </tr>
+                            <tr>
+                                <td> M5-Swiss Epidemic Prediction Data </td>
+                                <td>96.13</td>
+                                <td> 18315 </td>
+                                <td>19736 </td>
+                            </tr>
+                            <tr>
+                                <td> M6-Oliver Wyman</td>
+                                <td> 98.66</td>
+                                <td> 7244</td>
+                                <td> 7628</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel" style="min-height: 330px;">
+                    <div class="panel-title">
+                        <h3>Teams & Model</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table>
+
+                            <tr>
+                                <td>Model</td>
+                                <td> Team</td>
+                                <td> link</td>
+                            </tr>
+                            <tr>
+                                <td>M1</td>
+                                <td> MIT </td>
+                                <td><a
+                                        href="https://www.covidanalytics.io/projections">https://www.covidanalytics.io/projections</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> M2</td>
+                                <td> University of Michigan</td>
+                                <td> <a
+                                        href="https://umich-biostatistics.shinyapps.io/covid19/">https://umich-biostatistics.shinyapps.io/covid19/</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> M3</td>
+                                <td> ISpirt Model </td>
+                                <td> <a
+                                        href="https://indiadistrictmodel.indiacovidmodel.in/">https://indiadistrictmodel.indiacovidmodel.in/</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> M4</td>
+                                <td> Fraser Group - Oxford Univesity</td>
+                                <td> <a
+                                        href="https://dmca.shinyapps.io/covidcurves/">https://dmca.shinyapps.io/covidcurves/</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> M5</td>
+                                <td> Swiss Epidemic Prediction Data</td>
+                                <td> <a
+                                        href="https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/">https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> M6</td>
+                                <td> Oliver Wyman</td>
+                                <td><a
+                                        href="https://pandemicnavigator.oliverwyman.com/forecast?mode=country&region=India&panel=baseline">https://pandemicnavigator.oliverwyman.com/forecast?mode=country&region=India&panel=baseline</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel">
+                    <div class="panel-title">
+                        <h3>Model Selection Criteria</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li>Considering models currently deployed on the Web</li>
+                            <li>Models should forecast India covid-19 total count</li>
+                            <li>Forecast data be updated daily/weekly basis</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel">
+                    <div class="panel-title">
+                        <h3>Reference</h3>
+                    </div>
+                    <div class="panel-body">
+                        <a
+                            href="https://www.covidanalytics.io/projections">https://www.covidanalytics.io/projections</a>
+                        <a
+                            href="https://umich-biostatistics.shinyapps.io/covid19/">https://umich-biostatistics.shinyapps.io/covid19/</a>
+                        <a
+                            href="https://indiadistrictmodel.indiacovidmodel.in/">https://indiadistrictmodel.indiacovidmodel.in/</a>
+                        <a href="https://dmca.shinyapps.io/covidcurves/">https://dmca.shinyapps.io/covidcurves/</a>
+                        <a
+                            href="https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/">https://renkulab.shinyapps.io/COVID-19-Epidemic-Forecasting/</a>
+                        <a
+                            href="https://pandemicnavigator.oliverwyman.com/forecast?mode=country&region=India&panel=baseline">https://pandemicnavigator.oliverwyman.com/forecast?mode=country&region=India&panel=baseline</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row center-xs">
+            <div class="col-xs-6">
+                <div class="box">
+                    
+                    <!-- Team:
+                    <a class="developer" href="https://www.linkedin.com/in/solaimuruganv/">Solaimurugan V</a>
+                    <a class="developer" href="https://www.linkedin.com/in/rathivakkayil/">Rathi Vakkayil</a>
+                    <a class="developer" href="https://www.linkedin.com/in/arunkumarv31/">Arunkumar V</a> -->
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!--     <a href="d3f-index.html">D3 forcast</a> -->
+
+
+    <!-- Chart.js v2.9.3 -->
+    <script src="static/jquery-3.5.1.min.js"></script>
+    <script src="static/Chart2.6.min.js"></script>
+    <script src="code/tn_ui.js"></script>
+
+    <script>
+        let isG1Fullscreen = false;
+        let isG2Fullscreen = false;
+
+        $('#g1-btn').click(function () {
+
+            if (isG1Fullscreen) {
+                $('#graph1').css({
+                    position: 'relative',
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    zIndex: 0
+                });
+                isG1Fullscreen = false;
+            } else {
+                $('#graph1').css({
+                    position: 'fixed',
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    zIndex: 999
+                });
+                isG1Fullscreen = true;
+            }
+
+        });
+
+        $('#g2-btn').click(function () {
+
+            if (isG2Fullscreen) {
+                $('#graph2').css({
+                    position: 'relative',
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    zIndex: 0
+                });
+                isG2Fullscreen = false;
+            } else {
+                $('#graph2').css({
+                    position: 'fixed',
+                    top: 0,
+                    right: 0,
+                    bottom: 0,
+                    left: 0,
+                    zIndex: 999
+                });
+                isG2Fullscreen = true;
+            }
+
+        });
+    </script>
+
+</body>
+
+</html>
