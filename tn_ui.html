@@ -15,7 +15,7 @@
         <h2 class="ak-title">TN_UI</h2>
         <div class="team">
             <a href="https://www.linkedin.com/in/solaimuruganv/">Solaimurugan V</a> |
-            <a href="https://www.linkedin.com/in/rathivakkayil/">Rathi Vakkayil</a> | 
+            <a href="https://www.linkedin.com/in/rathivakkayil/">Rathi Vakkayil</a> |
             <a href="https://www.linkedin.com/in/arunkumarv31/">Arunkumar V</a>
         </div>
     </div>
@@ -216,7 +216,73 @@
             </div>
         </div>
 
+        <!-- yoyo -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel" style="min-height: 330px;">
+                    <div class="panel-title">
+                        <h3>Comorbidity Graph</h3>
+                    </div>
+                    <div class="panel-body">
+                        <canvas id="myChart_morbidity"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel hpanel" style="min-height: 404px;">
+                    <div class="panel-title">
+                        <h3>Comorbity - statical analysis</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table>
+                            <tr>
+                                <td>Disease</td>
+                                <td>Standalone/Cooccurence with other conditions Conditions</td>
+                                <td>% Occurence in total covid cases</td>
+                            </tr>
+                            <tr>
+                                <td>Hypertension(Systemic/Systolic)</td>
+                                <td>462</td>
+                                <td>42.8</td>
+                            </tr>
+                            <tr>
+                                <td>Diabetes</td>
+                                <td>614</td>
+                                <td>56.9</td>
+                            </tr>
+                            <tr>
+                                <td>Absence of any factors</td>
+                                <td>178</td>
+                                <td>16.5</td>
+                            </tr>
+                            <tr>
+                                <td>CAD- coronary Artery Disease</td>
+                                <td>129</td>
+                                <td>12.0</td>
+                            </tr>
+                            <tr>
+                                <td>Chronic Kidney Conditions</td>
+                                <td>86</td>
+                                <td>8.0</td>
+                            </tr>
+                            <tr>
+                                <td>Bronchial Asthma</td>
+                                <td>22</td>
+                                <td>2.0</td>
+                            </tr>
+                        </table>
 
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- yoyo -->
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -259,7 +325,7 @@
         <div class="row center-xs">
             <div class="col-xs-6">
                 <div class="box">
-                    
+
                     <!-- Team:
                     <a class="developer" href="https://www.linkedin.com/in/solaimuruganv/">Solaimurugan V</a>
                     <a class="developer" href="https://www.linkedin.com/in/rathivakkayil/">Rathi Vakkayil</a>
@@ -280,6 +346,7 @@
     <script src="static/jquery-3.5.1.min.js"></script>
     <script src="static/Chart2.6.min.js"></script>
     <script src="code/tn_ui.js"></script>
+    <script src="code/tn_morbidity.js"></script>
 
     <script>
         let isG1Fullscreen = false;

@@ -1,4 +1,4 @@
-let data = {
+let data_morbidity = {
     labels: ['Hypertension(Systemic/Systolic)', 'Diabetes', 'Absence of any factors', 'CAD- coronary Artery Disease', 'Chronic Kidney Conditions', 'Bronchial Asthma', 'Single CoMorbidity Factor', 'No Comorbidity Factor', 'Multiple Comorbidity Factors', 'Unknown Factors',],
     datasets: [{
         label: 'TN_Morbidity',
@@ -19,7 +19,7 @@ let data = {
     }]
 }
 
-let options = {
+let options_morbidity = {
     elements: {
         rectangle: {
             borderWidth: 2,
@@ -34,10 +34,10 @@ let options = {
         text: 'TN Morbidity'
     }
 };
-var ctx = document.getElementById('myChart').getContext('2d');
+var ctx_morbidity = document.getElementById('myChart_morbidity').getContext('2d');
 
-var myBarChart = new Chart(ctx, {
+var myBarChart_morbidity = new Chart(ctx_morbidity, {
     type: 'horizontalBar',
-    data: data,
-    options: options
+    data: data_morbidity,
+    options: options_morbidity
 });
