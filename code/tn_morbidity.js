@@ -3,7 +3,12 @@ let data_morbidity = {
     datasets: [{
         label: 'TN_Morbidity',
         borderWidth: 1,
-        data: [85.8, 66.1, 16.5, 12.0, 8.0, 2.0, 18.54, 16.50, 62.93, 2.04],
+        data: [42.8,
+            56.9,
+            16.5,
+            12.0,
+            8.0,
+            2.0, 18.54, 16.50, 62.93, 2.04],
         backgroundColor: [
             "rgb(174, 216, 229)", 
             "rgb(174, 216, 229)", 
