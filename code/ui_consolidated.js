@@ -14,9 +14,9 @@ let data = {
 
 
  
-let wh_ci = [null, null, null, null, null, null, null, null, '547383', '564109', '581227', '599338', '619065', '637282', '668653', '690008', '711939', '734428', '757541', '781005', '805199', '837190', '862613', '889567', '917051', '945159', '974051', '1003775', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+let wh_ci = [null, null, null, null, null, null, null, null, '546892','563618','580736','598847','618574','636791','668162','689517','711448','733937','757050','780514','804708','836699','862122','889076','916560','944668','973560','1003284',null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
 let wab_ba = [null, null, null, null, null, null, null, null, '503273', '519999', '537117', '555228', '574954', '593172', '624543', '645898', '667828', '690317', '713430', '736895', '761089', '793080', '818503', '845457', '872941', '901049', '929941', '959665', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
-let wl_ci = [null, null, null, null, null, null, null, null, '459163', '475889', '493007', '511118', '530844', '549061', '580433', '601787', '623718', '646207', '669320', '692785', '716978', '748969', '774392', '801347', '828830', '856938', '885831', '915554', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+let wl_ci = [null, null, null, null, null, null, null, null, '459654','476380','493498','511609','531335','549553','580924','602278','624209','646698','669811','693276','717469','749460','774883','801838','829322','857429','886322','916045',null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
 
 //let ew_ap = [null, null, null, null, null, null, null, null, '496194', '511373', '526869', '544504', '566078', '581123', '612741', '631667', '650998', '670741', '690867', '710072', '730016', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]; 
 
